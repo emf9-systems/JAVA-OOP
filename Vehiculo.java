@@ -46,4 +46,8 @@ public class Vehiculo {
         this.ruedas = ruedas;
     }
 
+    public void encender() {
+        System.out.println("El vehiculo de color "+this.color+" y marca "+this.marca+" esta encendido");
+    }
+
 }

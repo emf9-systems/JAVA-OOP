@@ -32,6 +32,8 @@ public class Aplicacion {
         
         System.out.println("motocicleta ruedas, modelo y año:"+motocicleta.ruedas+" "+motocicleta.modelo+" "+motocicleta.ano+" ");
 
+        autoCompleto.encender();
+
 
 
 
