@@ -8,15 +8,23 @@ public class Vehiculo {
     private String color;
     private int ruedas;
 
+    // Estos atributos no son de la instancia, son de la class
+    private static int cantidadVehiculos = 0;
+    private static String pais = "Chile";
+
     // Metodo constructor: encargado de inicializar la instancia
     public Vehiculo() {
         // Cree un nuevo vehiculo
+        Vehiculo.cantidadVehiculos++;
+        System.out.println("Cantidad de vehiculos: "+cantidadVehiculos);
 
 
     }
     // SOBRECARGA DE METODO CONSTRUCTOR
     public Vehiculo(String color) {
         this.color = color;
+        Vehiculo.cantidadVehiculos++;
+        System.out.println("Cantidad de vehiculos: "+cantidadVehiculos);
     }
 
     public Vehiculo(int ano, String marca, String modelo) {
@@ -25,6 +33,8 @@ public class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.ruedas = 4;
+        Vehiculo.cantidadVehiculos++;
+        System.out.println("Cantidad de vehiculos: "+cantidadVehiculos);
     }
 
 
@@ -34,6 +44,8 @@ public class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.ruedas = 4;
+        Vehiculo.cantidadVehiculos++;
+        System.out.println("Cantidad de vehiculos: "+cantidadVehiculos);
     }
 
 
@@ -44,6 +56,8 @@ public class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.ruedas = ruedas;
+        Vehiculo.cantidadVehiculos++;
+        System.out.println("Cantidad de vehiculos: "+cantidadVehiculos);
     }
 
     public void encender() {
@@ -88,6 +102,15 @@ public class Vehiculo {
 
     public int getRuedas() {
         return this.ruedas;
+    }
+
+    public static void esAutomotora() {
+        if(Vehiculo.cantidadVehiculos>=5){
+            System.out.println("¡Es una Automotora!");
+        }
+        else{
+            System.out.println("No es una Automora, ¡No tienes Vehiculos suficientes!");
+        }
     }
 
 }

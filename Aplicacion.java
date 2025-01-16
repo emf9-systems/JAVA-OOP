@@ -39,6 +39,8 @@ public class Aplicacion {
 
         autoCompleto.encender();
 
+        Vehiculo.esAutomotora();
+
 
 
 
